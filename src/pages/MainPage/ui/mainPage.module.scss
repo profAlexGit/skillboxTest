@@ -1,0 +1,10 @@
+.mainPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-grow: 1;
+}

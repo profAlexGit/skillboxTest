@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "start": "webpack serve --env port=3001"
+    "start": "webpack serve --env port=3001",
+    "start:server": "json-server --watch json-server/db.json --port 8000"
   },
   "keywords": [],
   "author": "",
@@ -36,9 +37,12 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.15.0"
   }
 }

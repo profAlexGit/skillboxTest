@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0 0 0 / 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 12px;
+  background: #e8e8ea;
+  max-width: 60%;
+}
+
+.opened {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 100;
+
+  .content {
+    animation-name: open;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.closing {
+  .content {
+    animation-name: close;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes open {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes close {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.3);
+  }
+}

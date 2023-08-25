@@ -27,6 +27,7 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
 		}),
 		new DefinePlugin({
 			__API__: JSON.stringify(apiURL),
+			__IS_DEV__: isDev
 		})
 	];
 	
